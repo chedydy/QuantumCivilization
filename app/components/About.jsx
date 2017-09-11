@@ -1,8 +1,12 @@
 var React = require('react');
 
-var About = (props) => {
-    return(
-        <div className="about">
+var About = React.createClass({
+    componentDidMount:function(){
+        document.getElementById('about').scrollIntoView();
+    },
+    render: function() {
+     return (
+         <div className="about" id="about">
             <h1 className="text-center">About</h1>
             <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -11,6 +15,7 @@ var About = (props) => {
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
     )
-};
+    }
+});
 
 module.exports = About;
