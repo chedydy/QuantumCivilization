@@ -3,16 +3,17 @@
 var React = require('react');
 var { Link } = require('react-router');
 var Carousel = require('nuka-carousel');
+var Nav = require('Nav');
 
 var Main = React.createClass({
     mixins: [Carousel.ControllerMixin],
     render: function() {
     return (
-        <div className="container">
-           <Carousel>
-                <img src="images/QuantumCivilization.png"/>
-                <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide2"/>
-                <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3"/>
+        <div className="container" style={{padding:0}}>        
+           <Carousel wrapAround={true} autoplay={true}>
+                <img src="images/header-image-1.png"/>
+                <img src="images/header-image-1.png"/>
+                <img src="images/header-image-1.png"/>
             </Carousel>
             {this.props.children}
             <div className="row">
